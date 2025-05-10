@@ -10,11 +10,6 @@ const MovieCard = ({
   vote_average,
   release_date,
 }: Movie) => {
-  console.log({
-    uri: poster_path
-      ? `https://image.tmdb.org/t/p/w500${poster_path}`
-      : "https://placehold.co/600x400/1a1a1a/FFFFFF.png",
-  });
   return (
     <Link href={`/movies/${id}`} asChild>
       <TouchableOpacity className="w-[30%]">
