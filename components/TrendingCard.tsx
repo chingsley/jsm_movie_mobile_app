@@ -5,7 +5,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { images } from "@/constants/images";
 
 const TrendingCard = ({
-  movie: { movie_id, title, poster_url },
+  movie: { movie_id, title, poster_url, count },
   index,
 }: TrendingCardProps) => {
   return (
@@ -20,7 +20,7 @@ const TrendingCard = ({
         <View className="absolute bottom-9 -left-3.5 px-2 py-1 rounded-full">
           <MaskedView
             maskElement={
-              <Text className="font-bold text-white text-6xl">{index + 1}</Text>
+              <Text className="font-bold text-white text-6xl">{count}</Text>
             }
           >
             <Image

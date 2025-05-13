@@ -13,7 +13,7 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
       process.env.EXPO_PUBLIC_APPWRITE_COLLECTION_ID!,
       [Query.equal('searchTerm', query)]
     );
-
+    // console.log('\n>>>>>>>>>>\nresult = ', result);
     if (result.documents.length > 0) {
       const existingMovie = result.documents[0];
       return await databases.updateDocument(
